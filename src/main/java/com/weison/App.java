@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfigura
 /**
  * Hello world!
  */
+
 @SpringBootApplication(exclude = {MultipartAutoConfiguration.class})
 public class App {
 
