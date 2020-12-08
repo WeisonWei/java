@@ -1,8 +1,7 @@
 package com.weison.io.utils;
 
 import com.jcraft.jsch.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.*;
 import java.util.Properties;
@@ -11,9 +10,8 @@ import java.util.Vector;
 import static org.apache.commons.lang3.StringUtils.isEmpty;
 
 
+@Slf4j
 public class SftpUtil {
-
-    private final static Logger logger = LoggerFactory.getLogger(SftpUtil.class);
 
     private static String host = "ip地址";
 
@@ -81,7 +79,7 @@ public class SftpUtil {
             channel.connect();
             sftp = (ChannelSftp) channel;
         } catch (JSchException e) {
-            logger.error("连接【" + host + ":" + port + "】异常", e);
+            log.error("连接【" + host + ":" + port + "】异常", e);
         }
     }
 
@@ -118,7 +116,7 @@ public class SftpUtil {
             channel.connect();
             sftp = (ChannelSftp) channel;
         } catch (JSchException e) {
-            logger.error("连接【" + host + ":" + port + "】异常", e);
+            log.info("连接【" + host + ":" + port + "】异常", e);
             throw new Exception("Could not connect to :" + host + ":" + port);
         }
     }
@@ -155,7 +153,7 @@ public class SftpUtil {
             sftp.cd(remotePath);
             return sftp.get(remoteFile);
         } catch (SftpException e) {
-            logger.error("文件下载失败或文件不存在！", e);
+            log.error("文件下载失败或文件不存在！", e);
             throw e;
         } finally {
             // disconnect();
@@ -176,7 +174,7 @@ public class SftpUtil {
             }
             return output.toByteArray();
         } catch (SftpException e) {
-            logger.error("文件下载失败或文件不存在！", e);
+            log.error("文件下载失败或文件不存在！", e);
         } finally {
             disconnect();
         }
@@ -196,7 +194,7 @@ public class SftpUtil {
      * @return
      */
     public static synchronized boolean downloadFile(String remotePath, String remoteFileName, String localPath, String localFileName) {
-        logger.info(remotePath + "/" + remoteFileName + "/" + localPath + "/" + localFileName);
+        log.info(remotePath + "/" + remoteFileName + "/" + localPath + "/" + localFileName);
         try {
             if (sftp == null || !isConnected()) {
                 connect();
@@ -207,9 +205,9 @@ public class SftpUtil {
             sftp.get(remoteFileName, new FileOutputStream(file));
             return true;
         } catch (FileNotFoundException e) {
-            logger.error("不存在文件,Path:" + remotePath + ",file:" + remoteFileName, e);
+            log.error("不存在文件,Path:" + remotePath + ",file:" + remoteFileName, e);
         } catch (SftpException e) {
-            logger.error("下载文件处理异常,Path:" + remotePath + ",file:" + remoteFileName, e);
+            log.error("下载文件处理异常,Path:" + remotePath + ",file:" + remoteFileName, e);
         } finally {
             disconnect();
         }
@@ -228,7 +226,7 @@ public class SftpUtil {
             mkDir(remotePath.replace(sftp.pwd(), ""));// 绝对路径变为相对路径
             sftp.put(input, fileName);
         } catch (Exception e) {
-            logger.error("文件上传异常！", e);
+            log.error("文件上传异常！", e);
             throw new Exception("文件上传异常:" + e.getMessage());
         } finally {
             if (input != null) {
@@ -270,13 +268,13 @@ public class SftpUtil {
             uploadFile(remotePath, remoteFileName, in);
             return true;
         } catch (Exception e) {
-            logger.error("上传单个文件异常", e);
+            log.error("上传单个文件异常", e);
         } finally {
             if (in != null) {
                 try {
                     in.close();
                 } catch (IOException e) {
-                    logger.warn("关闭sftp资源异常", e);
+                    log.warn("关闭sftp资源异常", e);
                 }
             }
         }
@@ -313,7 +311,7 @@ public class SftpUtil {
             }
             return true;
         } catch (SftpException e) {
-            logger.error("sftp创建目录异常", e);
+            log.error("sftp创建目录异常", e);
         }
         return false;
     }
@@ -329,7 +327,7 @@ public class SftpUtil {
             SftpATTRS sftpATTRS = sftp.lstat(directory);
             return sftpATTRS.isDir();
         } catch (Exception e) {
-            // logger.error("sftp目录isDirExist异常", e);
+            // log.error("sftp目录isDirExist异常", e);
         }
         return false;
     }
@@ -357,7 +355,7 @@ public class SftpUtil {
             }
             return true;
         } catch (SftpException e) {
-            logger.error("删除文件【" + remotePath + "/" + remoteFile + "】发生异常！", e);
+            log.error("删除文件【" + remotePath + "/" + remoteFile + "】发生异常！", e);
             throw e;
         }
     }
@@ -383,7 +381,7 @@ public class SftpUtil {
             // 进入当前目录
             sftp.cd(now + "/" + dirName);
         } catch (SftpException e) {
-            logger.error("mkDir Exception : " + e);
+            log.error("mkDir Exception : " + e);
         }
     }
 
@@ -395,11 +393,11 @@ public class SftpUtil {
      */
     public boolean openDir(String directory) {
         try {
-            logger.debug("opendir: {}", directory);
+            log.debug("opendir: {}", directory);
             sftp.cd(directory);
             return true;
         } catch (SftpException e) {
-            logger.debug("openDir【" + directory + "】 Exception : " + e);
+            log.debug("openDir【" + directory + "】 Exception : " + e);
             return false;
         }
     }
@@ -454,7 +452,7 @@ public class SftpUtil {
             }
             sftp.put(input, fileName);
         } catch (Exception e) {
-            logger.error("文件上传异常！", e);
+            log.error("文件上传异常！", e);
             throw new Exception("文件上传异常:" + e.getMessage());
         }
     }
@@ -472,7 +470,7 @@ public class SftpUtil {
             }
             sftp.put(input, fileName);
         } catch (Exception e) {
-            logger.error("文件上传异常！", e);
+            log.error("文件上传异常！", e);
             throw new Exception("文件上传异常:" + e.getMessage());
         } finally {
             if (input != null) {
