@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.CompletableFuture;
 
-public class complatbleFutureTest {
+public class CompletableFutureTest {
 
     @Test
     public void cached() {
