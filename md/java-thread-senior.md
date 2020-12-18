@@ -27,3 +27,9 @@
 
 > [Java锁](https://www.cnblogs.com/linghu-java/p/8944784.html)
 > [Java对象结构](https://blog.csdn.net/zqz_zqz/article/details/70246212)
+https://zhuanlan.zhihu.com/p/133851347
+https://cloud.tencent.com/developer/article/1465413
+https://zhuanlan.zhihu.com/p/75880892
+https://zhuanlan.zhihu.com/p/52196637
+https://zhuanlan.zhihu.com/p/85846117
+https://zhuanlan.zhihu.com/p/247579215
