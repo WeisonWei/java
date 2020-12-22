@@ -1,4 +1,4 @@
-package com.weison.algorithm;
+package com.weison.algorithm.link;
 
 /**
  * @author weixiaoxing

@@ -1,4 +1,4 @@
-package com.weison.algorithm;
+package com.weison.algorithm.link;
 
 public class One {
     public static void main(String[] args) {
