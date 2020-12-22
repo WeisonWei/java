@@ -54,10 +54,7 @@ show variables like 'slow_query_log_file';
 ### 执行计划
 
 explain  select 语句
-
 explain select * from user where user_id =2
-
-在这里插入图片描述
 
 参数说明：
 
@@ -70,6 +67,7 @@ explain select * from user where user_id =2
     extra：见下图
 
 
+[redis-mysql存储策略](https://www.cnblogs.com/upnote/p/13185047.html)
 [执行计划](https://www.cnblogs.com/klvchen/p/10137117.html)
 [深入理解 MySQL 底层实现](https://gitbook.cn/gitchat/activity/5a07c4266a4b0d78856826ea)
 [MySQL 索引与优化](https://gitbook.cn/books/5c92fd312cc79178471b68db/index.html)
