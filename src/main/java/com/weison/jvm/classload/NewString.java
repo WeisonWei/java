@@ -1,4 +1,4 @@
-package com.weison.base.classload;
+package com.weison.jvm.classload;
 
 public class NewString {
 	public static void main(String[] args) {

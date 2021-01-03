@@ -9,14 +9,13 @@ import java.util.stream.Stream;
  */
 public class CreateStream {
     public static void main(String[] args) {
-        creadeStream();
-
+        createStream();
     }
 
     /**
      * different ways to create stream
      */
-    public static void creadeStream() {
+    public static void createStream() {
         //创建流的方式
         //１ Stream.of(val1, val2, val3….)
         System.out.println("-------------Stream.of(val1)-------------");
@@ -24,7 +23,7 @@ public class CreateStream {
         stream.forEach(System.out::println);
         //2 Stream.of(arrayOfElements)
         System.out.println("-------------Stream.of(arrayOfElements)-------------");
-        Stream<Integer> stream1 = Stream.of(new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9});
+        Stream<Integer> stream1 = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
         stream1.forEach(System.out::println);
         //3 someList.stream()
         System.out.println("-------------someList.stream()-------------");

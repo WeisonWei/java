@@ -1,4 +1,4 @@
-package com.weison.base.classload;
+package com.weison.jvm.classload;
 
 /**
  * 父类子类的加载顺序

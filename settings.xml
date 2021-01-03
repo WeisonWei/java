@@ -1,7 +1,7 @@
 <settings>
 
     <mirrors>
-        <!--aliyun用来拉镜像-->
+        <!--aliYun用来拉镜像-->
         <mirror>
             <id>alimaven</id>
             <name>aliyun maven</name>
