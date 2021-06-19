@@ -12,10 +12,9 @@ public class DynaProxyHandler implements InvocationHandler {
     private Object target;//被代理对象
 
     public void setTarget(Object target) {
-
               this.target = target;
-
     }
+
     public Object invoke(Object proxy, Method method, Object[] args)
 
                        throws Throwable {
