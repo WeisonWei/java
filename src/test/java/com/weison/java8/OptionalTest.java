@@ -76,8 +76,6 @@ public class OptionalTest {
         //filter2 存在才对它进行过滤
         String name7 = StudentFilter(weision);
         System.out.println("StudentFilter-->大于9岁的人是: " + name7);
-
-
     }
 
 

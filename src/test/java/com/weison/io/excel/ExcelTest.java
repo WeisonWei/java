@@ -96,7 +96,6 @@ public class ExcelTest {
         writeFont.setFontHeightInPoints((short) 20);
         headWriteCellStyle.setWriteFont(writeFont);
 
-
         //行 设置
         WriteCellStyle rowWriteCellStyle = new WriteCellStyle();
 

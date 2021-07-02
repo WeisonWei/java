@@ -1,6 +1,16 @@
 package com.weison.java8;
 
-import java.time.*;
+import java.time.DayOfWeek;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
+import java.time.OffsetDateTime;
+import java.time.Period;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
@@ -151,8 +161,6 @@ public class DateTimeTest {
         //get LocalTime from LocalDateTime
         LocalTime toLocalTime = localDateTime.toLocalTime();
         System.out.println("toLocalTime: " + toLocalTime);
-
-
     }
 
     /**

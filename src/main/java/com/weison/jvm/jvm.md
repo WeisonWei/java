@@ -11,8 +11,8 @@ java --> class --> 机器码(二进制)
 weison git:(master) ✗ javap -c JsonTest
 警告: 二进制文件JsonTest包含com.weison.JsonTest
 Compiled from "JsonTest.java"
-public class com.weison.JsonTest {
-  public com.weison.JsonTest();
+public class com.weison.json.JsonTest {
+  public com.weison.json.JsonTest();
     Code:
        0: aload_0
        1: invokespecial #1                  // Method java/lang/Object."<init>":()V

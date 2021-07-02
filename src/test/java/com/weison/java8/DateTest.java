@@ -3,7 +3,11 @@ package com.weison.java8;
 import org.junit.jupiter.api.Test;
 
 import java.text.SimpleDateFormat;
-import java.time.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.OffsetTime;
+import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
@@ -24,7 +28,6 @@ public class DateTest {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String sd = sdf.format(new Date(Long.parseLong(String.valueOf(time1))));
         System.out.println("格式化结果：" + sd);
-
 
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy 年 MM 月 dd 日 HH 时 mm 分 ss 秒");
         String sd2 = sdf1.format(new Date(Long.parseLong(String.valueOf(time1))));
@@ -57,7 +60,6 @@ public class DateTest {
         //获取时间毫秒
         Long milliSecond = LocalDateTime.now().toInstant(ZoneOffset.of("+8")).toEpochMilli();
 
-
         //LocalDate
         LocalDate localDate = LocalDate.now();
         LocalDate localDate1 = localDate.plusDays(1);
@@ -83,7 +85,6 @@ public class DateTest {
         LocalDateTime time3 = LocalDateTime.ofEpochSecond(1571396400l, 0, ZoneOffset.of("+8"));
 
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-
 
         System.out.println("-----1--------->" + time2.format(dateTimeFormatter));
         System.out.println("-----2--------->" + time3.format(dateTimeFormatter));

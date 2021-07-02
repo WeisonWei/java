@@ -9,7 +9,13 @@ import java.lang.reflect.Field;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.*;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicIntegerArray;
+import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.atomic.AtomicLongArray;
+import java.util.concurrent.atomic.AtomicReferenceArray;
 
 @Slf4j
 public class AtomicTest {
@@ -34,7 +40,7 @@ public class AtomicTest {
      */
     @Test
     public void unsafeTest() throws NoSuchFieldException {
-        User user = new User("Even",10);
+        User user = new User("Even", 10);
         Unsafe unsafe = Unsafe.getUnsafe();
         log.info("=====end====={}", al);
         Field name = user.getClass().getDeclaredField("name");

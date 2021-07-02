@@ -12,7 +12,6 @@ import java.util.concurrent.locks.ReentrantLock;
 @Slf4j
 public class ConditionTest {
 
-
     /**
      * 在synchronized中我们可以使用wait(),notify()来让线程等待、唤醒
      * 在ReEntrantLock中我们可以用Condition中的await(),signal()来实现

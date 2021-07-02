@@ -4,7 +4,11 @@ import com.weison.java8.domain.Student;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
 public class CollectionTest {
     private static List<Student> studentList = new ArrayList<Student>();
@@ -33,7 +37,6 @@ public class CollectionTest {
 
         studentList.add(student3);
         studentSet.add(student3);
-
 
     }
 

@@ -13,7 +13,7 @@ public class CompletableFutureTest {
     public void test() {
 
         CompletableFuture.supplyAsync(() -> {
-            for (;;) {
+            for (; ; ) {
                 System.out.println("------");
             }
         });

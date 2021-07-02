@@ -43,7 +43,7 @@ public class LinkedBlockingQueueTest {
      * ================================
      * BlockingQueue : add offer(e) PUT offer(e,t,u) TAKE remove poll element peek DRAINTO CONTAINS
      * ================================
-     *
+     * <p>
      * 尾加非阻塞 add[e]
      * 尾加阻塞 put offer
      * 取头非阻塞 take

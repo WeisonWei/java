@@ -3,7 +3,12 @@ package com.weison.thread.base;
 import com.weison.thread.commom.RunnablePractice;
 import com.weison.thread.commom.ThreadPractice;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import java.util.concurrent.TimeUnit;
 

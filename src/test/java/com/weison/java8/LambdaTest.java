@@ -15,7 +15,6 @@ public class LambdaTest {
                 return x + y;
             }
         };
-
         // 执行
         func.calculate(8, 2);
     }

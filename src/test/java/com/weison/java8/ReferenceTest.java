@@ -12,7 +12,7 @@ import java.util.List;
 public class ReferenceTest {
 
     @Test
-    public  void methodReference() {
+    public void methodReference() {
 
         // 1 Lambda implementaion.
         IsReferable demoOne = () -> Reference.staticMethod();

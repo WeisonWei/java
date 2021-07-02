@@ -56,7 +56,6 @@ public class StreamTest {
         studentList2.add(student5);
         studentList2.add(student6);
 
-
         students.add(studentList1);
         students.add(studentList2);
 
@@ -74,7 +73,6 @@ public class StreamTest {
     private String mapString(String str) {
         return str + ",";
     }
-
 
     @Test
     public void flatMap() {

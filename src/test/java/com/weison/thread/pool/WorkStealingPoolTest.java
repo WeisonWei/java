@@ -2,7 +2,12 @@ package com.weison.thread.pool;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.FutureTask;
 
 public class WorkStealingPoolTest {
 
@@ -35,7 +40,6 @@ public class WorkStealingPoolTest {
         countDownLatch.await();
         System.out.println("---- end ----");
     }
-
 
     @Test
     public void test2() throws InterruptedException {

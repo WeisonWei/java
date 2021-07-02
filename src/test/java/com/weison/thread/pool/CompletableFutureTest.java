@@ -10,7 +10,7 @@ public class CompletableFutureTest {
     public void cached() {
         CompletableFuture.supplyAsync(() -> {
             Thread.currentThread().setName("99889989898998");
-            while (true){
+            while (true) {
                 System.out.println("--------");
             }
         });

@@ -1,4 +1,4 @@
-package com.weison;
+package com.weison.ut;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

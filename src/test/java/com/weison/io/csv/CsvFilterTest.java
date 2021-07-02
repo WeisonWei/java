@@ -19,7 +19,6 @@ import java.util.List;
 @Slf4j
 public class CsvFilterTest {
 
-
     /**
      * https://www.jianshu.com/p/6414185b2f01
      * @throws IOException
@@ -50,7 +49,6 @@ public class CsvFilterTest {
         List<T> list = csvToBean.parse();
         return list;
     }
-
 
     @Test
     public void readCsvFilter2() throws Exception {

@@ -30,7 +30,6 @@ public class CopyOnWriteArrayListTest {
                 log.info("read-" + i + "-->" + copyOnWriteArrayList.toString());
             }
         }, "read").start();
-
     }
 
     private void sleepOneMilliSecond() {

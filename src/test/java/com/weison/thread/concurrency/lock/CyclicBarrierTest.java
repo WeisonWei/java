@@ -3,7 +3,11 @@ package com.weison.thread.concurrency.lock;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.*;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 @Slf4j
 public class CyclicBarrierTest {
@@ -14,8 +18,9 @@ public class CyclicBarrierTest {
     /**
      * 从字面上的意思可以知道，这个类的中文意思是“循环屏障”。大概的意思就是一个可循环利用的屏障。
      * 它的作用就是会让所有线程都等待完成后才会继续下一步行动。
-     *
+     * <p>
      * https://www.jianshu.com/p/333fd8faa56e
+     *
      * @throws InterruptedException
      */
     @Test

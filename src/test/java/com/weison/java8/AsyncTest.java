@@ -25,7 +25,6 @@ public class AsyncTest {
     /**
      * 1. 获取CompletableFuture
      */
-
     @Test
     @SneakyThrows
     public void instance() {
