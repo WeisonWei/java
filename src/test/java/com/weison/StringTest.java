@@ -13,13 +13,11 @@ public class StringTest {
     static List<String> paths = new ArrayList<>();
     static Set<String> SECURITY_PATH_SET = new HashSet<String>();
 
+
     /**
-     * /user
-     * /user/mart_srd
-     * /user/mart_srd/data_export.db
-     * 10000
-     * 35
-     * 24
+     * /a/b/c
+     * /a/b
+     * /c
      */
     public static void main(String[] args) {
         init(1000);
@@ -52,6 +50,35 @@ public class StringTest {
         pStream();
         paths.clear();
 
+    }
+
+    private static void isSec() {
+        System.out.println("-- startsWith --" + SECURITY_PATH_SET.size());
+        long start = System.currentTimeMillis();
+        startsWith("/a/");
+        long end = System.currentTimeMillis();
+        System.out.println("startsWith: " + (end - start));
+
+
+        System.out.println("-- contains --" + SECURITY_PATH_SET.size());
+        long start1 = System.currentTimeMillis();
+        contains("/a");
+        long end1 = System.currentTimeMillis();
+        System.out.println("contains: " + (end1 - start1));
+    }
+
+    private static void startsWith(String path) {
+        for (String p : SECURITY_PATH_SET) {
+            if(path.startsWith(p)){
+                System.out.println("OK");
+            }
+        }
+    }
+
+    private static void contains(String path) {
+        if(SECURITY_PATH_SET.contains(path)){
+            System.out.println("OK");
+        }
     }
 
     private static void foreach() {
