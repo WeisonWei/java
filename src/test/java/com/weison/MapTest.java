@@ -1,4 +1,4 @@
-package com.weison.collection;
+package com.weison;
 
 import com.weison.java8.domain.Student;
 import org.junit.jupiter.api.BeforeAll;
