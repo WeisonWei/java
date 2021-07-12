@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 
 public class NumTest {
     public static void main(String[] args) {
-        divide();
+        forNum();
     }
 
     public static void divide() {
@@ -24,7 +24,7 @@ public class NumTest {
     }
 
     public static void forNum() {
-        for (int i = 80000; i < 100000; i++) {
+        for (int i = 0; i < 400000; i++) {
             String path = File.separator + System.currentTimeMillis() + i + File.separator + i;
             System.out.println(path);
         }
