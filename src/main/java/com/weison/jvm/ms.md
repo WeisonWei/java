@@ -1,26 +1,30 @@
 ## java8
-新特性
-变化：Map 线程池 内存区域 默认垃圾收集器
+变化：javaFx jmx jdeps atomic ConcurrentMap ForkJoinPool.commonPool() 线程池 内存区域 默认垃圾收集器
 
 ## os
 内核态 用户态 系统调用 shell
 
 ## 集合
 - hashMap 和 concurrentHashMap 线程安全机制
-- ArrayList LinkList 初始化 扩容 快速失败
-
+- ArrayList LinkList 初始化 扩容 快速失败(x)
+  ForkJoinPool
 ## 线程
 sleep() wait() join yield interrupted
 线程池 参数 拒绝策略 队列长度 阻塞队列
 线程池：forkjoin worksteal 
 设计一个高并发处理能力线程池
 
+## 并发
+java.concurrent.atomic
+AtomicInteger AtomicLong/LongAdder
+ConcurrentHashSet
+
 ## 锁
-synchronized 锁升级
-volatile 结合os
-ReentrantLock ReentrantReadWriteLock 源码实现
+synchronized 锁升级（x）
+volatile
+ReentrantLock ReentrantReadWriteLock 源码实现 (x)
 aqs 队列入队出队
-conuntLantch cyclicbar semphore 源码实现
+conuntLantch cyclicbar semphore 源码实现 (x)
 分布式锁思想 redisson
 
 ## io
@@ -28,7 +32,7 @@ bio nio aio
 reactor netty
 
 ## jvm
-方法区 ： 常量 静态变量 类元信息
+方法区 ：常量 静态变量 类元信息
 从多线程交互的角度解读程序计数器(线程私有)的作用
 局部变量表 + 操作数栈(运算过程的临时空间)的压栈出栈 ： 描述 int i= 1+a; 在栈针中的运行过程
 动态链接：方法区对应方法的符号链接(地址)
