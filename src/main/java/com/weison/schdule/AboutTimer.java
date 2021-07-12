@@ -8,8 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class AboutTimer {
 
-    @SneakyThrows
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Timer timer = new Timer();
         TimerTask timerTask = newTimerTask(2);
         timer.schedule(timerTask,100);
