@@ -60,7 +60,7 @@ public class Simple {
     @BenchmarkMode(Mode.Throughput)
     @Warmup(iterations = 1)
     @Measurement(iterations = 3)
-    @OutputTimeUnit(TimeUnit.MILLISECONDS)
+    @OutputTimeUnit(TimeUnit.NANOSECONDS)
     public double f(SharedState sharedState) {
         return Math.log(Math.PI);
     }
